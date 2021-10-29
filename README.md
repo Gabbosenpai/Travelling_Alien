@@ -3,3 +3,4 @@ Endless runner
 
 Ue
 Ao
+ao2
