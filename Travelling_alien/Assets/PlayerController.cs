@@ -10,7 +10,7 @@ public class PlayerController : MonoBehaviour
     public float groundedHeight = 0;
     public bool isGrounded = false;
     public bool isHoldingJump = false;
-    public float maxHoldJumpTime = 0.3f;
+    public float maxHoldJumpTime = 0.22f;
     public float holdJumpTimer = 0.0f;
     public float jumpGroundThreshold = 1;
 
