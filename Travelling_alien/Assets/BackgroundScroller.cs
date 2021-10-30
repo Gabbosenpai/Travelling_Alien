@@ -8,7 +8,7 @@ public class BackgroundScroller : MonoBehaviour
 
     public Rigidbody2D rBody;
     private float width;
-    private float scrollSpeed = -2f;
+    private float scrollSpeed = -15f;
 
     
     
@@ -23,6 +23,7 @@ public class BackgroundScroller : MonoBehaviour
         collider.enabled = false;
 
         rBody.velocity = new Vector2(scrollSpeed, 0);
+        resetObstacle();
     }
 
     // Update is called once per frame
@@ -32,6 +33,11 @@ public class BackgroundScroller : MonoBehaviour
         {
             Vector2 resetPosition = new Vector2(width * 2f, 0);
             transform.position = (Vector2)transform.position + resetPosition;
+            resetObstacle();
         }
+    }
+    void resetObstacle()
+    {
+        transform.GetChild(0).localPosition = new Vector3(Random.Range(-1,1), Random.Range(-2.5f, 3.0f), 0);   
     }
 }
