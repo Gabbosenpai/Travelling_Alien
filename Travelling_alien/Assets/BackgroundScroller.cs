@@ -40,4 +40,12 @@ public class BackgroundScroller : MonoBehaviour
     {
         transform.GetChild(0).localPosition = new Vector3(Random.Range(-1,1), Random.Range(-2.5f, 3.0f), 0);   
     }
+
+    /*private void OnTriggerEnter2D(Collider2D other)
+    {
+       if (other.gameObject.CompareTag("Player"))
+        {
+            Destroy(gameObject);
+        }
+    }*/
 }
