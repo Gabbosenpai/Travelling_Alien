@@ -12,7 +12,7 @@ public class Obstacle : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if(other.tag == "Destroyer")
+        if(other.tag == "Destroyer" || other.tag == "Player")
         {
             Destroy(this.gameObject);
         }
