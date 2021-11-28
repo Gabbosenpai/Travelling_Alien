@@ -1,5 +1,13 @@
 fileFormatVersion: 2
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream:Travelling_Alien 0.2/Assets/Scripts/Obstacle.cs.meta
 guid: 47efd18c963524e4a98c6a807d12c256
+=======
+guid: 1b26cc92969b0434d90bfb5818e5a004
+>>>>>>> Stashed changes:Travelling_Alien 0.2/Assets/Scripts/SpawnObstacles.cs.meta
+=======
+guid: 47efd18c963524e4a98c6a807d12c256
+>>>>>>> Stashed changes
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
