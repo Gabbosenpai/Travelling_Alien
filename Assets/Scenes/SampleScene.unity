@@ -507,7 +507,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 0}
   m_Direction: 0
   m_MinValue: 0
-  m_MaxValue: 3
+  m_MaxValue: 100
   m_WholeNumbers: 0
   m_Value: 0
   m_OnValueChanged:
@@ -608,6 +608,55 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 10}
   m_EdgeRadius: 0
+--- !u!1 &892481604
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 892481605}
+  - component: {fileID: 892481606}
+  m_Layer: 0
+  m_Name: Spawn Danger
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &892481605
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 892481604}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 9.44, y: 1.52, z: -0.19210243}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1657996130}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &892481606
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 892481604}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31757730d78ade64f9852cffba7e06fc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  vitamin: {fileID: 3082488442430687350, guid: 7fa11ea0fea343049a176955db5a4ada, type: 3}
+  minX: 0
+  maxX: 0
+  minY: 0
+  maxY: 0
+  TimeBetweenSpawn: 3
 --- !u!1 &932021669
 GameObject:
   m_ObjectHideFlags: 0
@@ -731,7 +780,7 @@ MonoBehaviour:
   maxX: 3.5
   minY: -1.5
   maxY: 4
-  TimeBetweenSpawn: 2.6
+  TimeBetweenSpawn: 5
 --- !u!1 &1336254302
 GameObject:
   m_ObjectHideFlags: 0
@@ -835,9 +884,11 @@ MonoBehaviour:
   maxHoldJumpTime: 0.22
   holdJumpTimer: 0
   jumpGroundThreshold: 1
+  maxEuphory: 100
   minEuphory: 0
   currentEuphory: 0
   euphoryBar: {fileID: 616030897}
+  interpolationPeriod: 0.1
 --- !u!61 &1522457816
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -912,6 +963,7 @@ Transform:
   - {fileID: 778079288}
   - {fileID: 1747239940}
   - {fileID: 1055503111}
+  - {fileID: 892481605}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
