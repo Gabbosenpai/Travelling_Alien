@@ -16,22 +16,26 @@ public class PlayerController : MonoBehaviour
 
     public float jumpGroundThreshold = 3;
 
+    public int maxEuphory = 100;
     public int minEuphory = 0;
     public int currentEuphory;
     public EuphoryBarComponent euphoryBar;
 
+    private float time = 0.0f;
+    public float interpolationPeriod = 10.0f;
 
 
     // Start is called before the first frame update
     void Start()
     {
-        currentEuphory = minEuphory;
-        euphoryBar.SetMinEuphory(minEuphory);
+        currentEuphory = maxEuphory;
+        euphoryBar.SetMaxEuphory(maxEuphory);
     }
 
     // Update is called once per frame
     void Update()
     {
+        time += Time.deltaTime / 2;
         Vector2 pos = transform.position;
         float groundDistance = Mathf.Abs(pos.y - groundedHeight);
 
@@ -49,6 +53,19 @@ public class PlayerController : MonoBehaviour
         {
             isHoldingJump = false;
         }
+
+        if (currentEuphory <= minEuphory) {
+            Destroy(this.gameObject);
+        }
+
+
+        if (time >= interpolationPeriod)
+        {
+            time = 0.0f;
+            Decrease(1);
+        }
+
+
     }
 
     private void FixedUpdate()
@@ -84,13 +101,41 @@ public class PlayerController : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Vitamin"))
         {
-            Improve(1);
+            if (currentEuphory < 50)
+            {
+                currentEuphory = 50;
+            }
+            else {
+                currentEuphory = 100;
+            }
+        }
+        if (other.gameObject.CompareTag("Obstacle"))
+        {
+            Improve(5);
+        }
+
+        if (other.gameObject.CompareTag("Danger"))
+        {
+            if (currentEuphory > 50)
+            {
+                currentEuphory = 50;
+            }
+            else
+            {
+                currentEuphory = 5;
+            }
         }
     }
 
     private void Improve(int incremento)
     {
         currentEuphory += incremento;
+        euphoryBar.SetEuphory(currentEuphory);
+    }
+
+    private void Decrease(int decremento)
+    {
+        currentEuphory -= decremento;
         euphoryBar.SetEuphory(currentEuphory);
     }
 }
