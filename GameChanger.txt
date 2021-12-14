@@ -1,0 +1,69 @@
+I PowerUp vengono conferiti randomicamente.
+Il giocatore non sa quale di questi raccoglierà.
+Può influenzare negativamente o positivamente la partita->tempo di comparsa 30-45s(WIP).
+
+Lista:"2x", "Stato Senile", "Demenza Senile", "Perfezionismo", " Lavoro in nero", "AfterLife", "Tax Time", "Immunità".
+
+
+
+2x(WIP)
+
+Doppi punti per 10s.
+Punteggio lampeggia + SFX.
+
+
+
+Stato Senile(WIP)
+
+Tutti gli elementi tranne il player sono più lenti per 5s.
+Appaiono barba e bastone ai loro sprite + SFX.
+
+
+
+Demenza Senile(WIP)
+
+Il player è molto più lento, influenzando tempo di risposta, velocità e altezza del salto per 7s.
+Appaiono barba e bastone a Blobby + SFX.
+
+
+
+Perfezionismo(WIP)
+
+Per i prossimi 15s non perdi euforia ma tutti gli elementi si trasformano in ostacoli, allo scadere del timer il punteggio totale viene raddoppiato se non si è mai entrati in 
+collisione con un ostacolo.
+Blobby è in fiamme + SFX ansiogeno.
+
+
+
+Lavoro in nero(WIP)
+
+Per 15s gli oggetti distruttibili danno più punti ma quelli pericolosi tolgono molta più euforia.
+Blobby indossa una maschera da ladro + SFX.
+
+
+
+AfterLife(WIP)
+
+Se Blobby subisce danno letale nei prossimi 15s non muore e ripristina una porzione di euforia.
+Blobby ha un'aureola sulla sua testa, subendo danno letale questa esplode con tante particelle fighe + SFX.
+Se Blobby non muore guadagna punti extra.
+
+
+
+Tax Time(WIP)
+
+Per 10s cambiano i punteggi quando interagisic con oggetti:
+-Quelli distruttibili danno più punti;
+-Quelli pericolosi tolgono più punti;
+-Vitamine tolgono punti(Bello Il sistema sanitario italiano ""gratuito"");
+Ad ogni interazione appare un stringa "TAXED" sotto al punteggio + SFX.
+Blobby si piega su sè stesso a causa di un grande sacco sulla schiena con su scritto "Tasse".
+
+
+
+Immunità(WIP)
+
+Blobby non perde euforia se entra in contatto con elementi pericolosi per 7s.
+Blobby cambia colore e ha un effetto particellare figo + SFX.
+
+
